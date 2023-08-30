@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package test;
+
+
+message Visitor {
+  string name = 1;
+  string sex = 2;
+  int32 age = 3;
+}
+
+message Ticket {
+  int32 queue_number = 1;
+  string welcome_text = 2;
+}
