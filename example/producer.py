@@ -31,6 +31,7 @@ async def produce():
             # If an error occurs, you get a status_code and the error message itself
             print(f"Oops: {GrpcStatus(err.status_code).name}, {err.message}")
         else:
+            # Deserialize (protobuf)
             ticket = message_pb2.Ticket()
             ticket.ParseFromString(raw_answer)
 

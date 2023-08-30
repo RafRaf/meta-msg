@@ -15,7 +15,7 @@ async def consume():
 
         req_msg = MetaMsg.load_message(msg.data)
 
-        # Deserialize
+        # Deserialize (protobuf)
         visitor = message_pb2.Visitor()
         visitor.ParseFromString(req_msg)
 

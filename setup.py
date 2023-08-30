@@ -7,7 +7,9 @@ setup(
     packages=find_packages(exclude=('tests/*',)),
     author='RafRaf',
     author_email='smartrafraf@gmail.com',
+    # description='BLABLA',
     license='MIT',
     keywords=['message', 'nats', 'rabbitmq'],
     test_suite='tests',
+    url='https://github.com/RafRaf/meta-msg/',
 )
