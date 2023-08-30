@@ -1,13 +1,13 @@
 import asyncio
 
-from meta_msg import MetaMsg, GrpcStatus, ServerError
 import nats
 
-from .proto import message_pb2
+from meta_msg import MetaMsg, GrpcStatus, ServerError
+from example.proto import message_pb2
 
 
 async def produce():
-    nc = await nats.connect("nats://nats:4222", connect_timeout=10)
+    nc = await nats.connect("tls://demo.nats.io:4443", connect_timeout=10)
 
     visitors = (
         ("Sarah", "woman", 32),

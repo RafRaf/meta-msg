@@ -3,12 +3,11 @@ import asyncio
 import nats
 
 from meta_msg import MetaMsg, GrpcStatus
-
-from .proto import message_pb2
+from example.proto import message_pb2
 
 
 async def consume():
-    nc = await nats.connect("nats://nats:4222", connect_timeout=10)
+    nc = await nats.connect("tls://demo.nats.io:4443", connect_timeout=10)
     queue_number = 1
 
     async def handler(msg):
